@@ -20,7 +20,7 @@ def innercls(cls=None, attr="outter"):
 
 def clsproxy(cls):
     class ClsProxy(object):
-        def __getattribute__(self, name):
+        def __getattr__(self, name):
             return cls.__getattribute__(name)
 
         def __setattr__(self, name, val):
